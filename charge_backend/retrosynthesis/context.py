@@ -8,13 +8,13 @@ from charge.clients.autogen import AutoGenAgent
 from fastapi import WebSocket
 from typing import Optional
 
-from charge_backend.backend_helper_funcs import Node, Edge, calculate_positions
+from backend_helper_funcs import Node, Edge, calculate_positions
 
 
 @dataclass
 class RetrosynthesisContext:
     """
-    Manages a retrosynthesis task
+    Manages a retrosynthesis experiment
     """
 
     node_ids: dict[str, Node] = field(default_factory=dict)
